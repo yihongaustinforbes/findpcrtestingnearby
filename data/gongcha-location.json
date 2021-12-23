@@ -1,0 +1,94 @@
+{
+  "type": "FeatureCollection",
+  "crs": {
+    "type": "name",
+    "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" }
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "PARK_ID": 1717,
+        "FACILITYID": 28018,
+        "NAME": "ゴンチャ (Gong cha) 東京駅 グランルーフ フロント店",
+        "NAME_FR": "Planchodrome de Greenboro",
+        "ADDRESS": "〒100-0005 東京都千代田区丸の内１丁目９−１ グランルーフ フロント内 B1階",
+        "DENSITY": "0.9",
+        "POPULARITY": "normal",
+        "DEMOGRAPHIC": "highschool crowd"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [35.686235, 139.752422]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "PARK_ID": 137,
+        "FACILITYID": 28019,
+        "NAME": "gongcha",
+        "NAME_FR": "Planchodrome Bridlewood",
+        "ADDRESS": "8720 Russell Road",
+        "DENSITY": "0.9",
+        "POPULARITY": "normal",
+        "DEMOGRAPHIC": "highschool crowd"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [35.650000, 139.733330]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "PARK_ID": 1133,
+        "FACILITYID": 28020,
+        "NAME": "Gong cha ららぽーと豊洲店",
+        "NAME_FR": "Lieu de planchodrome itinérant",
+        "ADDRESS": "〒135-0061 東京都江東区豊洲２丁目４−９ アーバンドック ららぽーと豊洲 1F フードコート内",
+        "DENSITY": "0.9",
+        "POPULARITY": "normal",
+        "DEMOGRAPHIC": "highschool crowd"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [35.683330, 139.816670]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "PARK_ID": 657,
+        "FACILITYID": 28000,
+        "NAME": "Roving Skateboard Park Location",
+        "NAME_FR": "Lieu de planchodrome itinérant",
+        "ADDRESS": "8720 Russell Road",
+        "DENSITY": "0.9",
+        "POPULARITY": "normal",
+        "DEMOGRAPHIC": "highschool crowd"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [35.988776, 139.648586]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "PARK_ID": 653,
+        "FACILITYID": 28008,
+        "NAME": "ゴンチャ 上野松坂屋店",
+        "NAME_FR": "Lieu de planchodrome itinérant",
+        "ADDRESS": "〒110-8503 東京都台東区上野３丁目２９−５",
+        "DENSITY": "0.9",
+        "POPULARITY": "normal",
+        "DEMOGRAPHIC": "highschool crowd"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [35.678953, 139.183013]
+      }
+    }
+  ]
+}
