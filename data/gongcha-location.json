@@ -8,87 +8,103 @@
     {
       "type": "Feature",
       "properties": {
-        "PARK_ID": 1717,
-        "FACILITYID": 28018,
-        "NAME": "ゴンチャ (Gong cha) 東京駅 グランルーフ フロント店",
-        "NAME_FR": "Planchodrome de Greenboro",
-        "ADDRESS": "〒100-0005 東京都千代田区丸の内１丁目９−１ グランルーフ フロント内 B1階",
+        "PARK_ID": 960,
+        "FACILITYID": 28014,
+        "NAME": "木下グループ新型コロナＰＣＲセンター秋葉原店",
+        "NAME_FR": "Planchodrome Bearbrook",
+        "ADDRESS": "千代田区外神田１－１４－７秋葉原野村ビル",
         "DENSITY": "0.9",
         "POPULARITY": "normal",
         "DEMOGRAPHIC": "highschool crowd"
       },
       "geometry": {
         "type": "Point",
-        "coordinates": [35.686235, 139.752422]
+        "coordinates": [35.765092, 139.648586]
       }
     },
     {
       "type": "Feature",
       "properties": {
-        "PARK_ID": 137,
-        "FACILITYID": 28019,
-        "NAME": "gongcha",
-        "NAME_FR": "Planchodrome Bridlewood",
-        "ADDRESS": "8720 Russell Road",
+        "PARK_ID": 1219,
+        "FACILITYID": 28001,
+        "NAME": "木下グループ新型コロナＰＣＲセンター新橋店",
+        "NAME_FR": "Planchodrome Bob-MacQuarrie (Parc SK8 Extreme)",
+        "ADDRESS": "港区新橋２－１６－１ニュー新橋ビル１階西側角",
         "DENSITY": "0.9",
         "POPULARITY": "normal",
         "DEMOGRAPHIC": "highschool crowd"
       },
       "geometry": {
         "type": "Point",
-        "coordinates": [35.650000, 139.733330]
+        "coordinates": [ 35.678953, 139.783013]
       }
     },
     {
       "type": "Feature",
       "properties": {
-        "PARK_ID": 1133,
-        "FACILITYID": 28020,
-        "NAME": "Gong cha ららぽーと豊洲店",
+        "PARK_ID": 1157,
+        "FACILITYID": 28002,
+        "NAME": "木下グループ新型コロナＰＣＲセンター浜松町店",
+        "ADDRESS": "港区芝大門１－１６－８",
+        "DENSITY": "0.9",
+        "POPULARITY": "normal",
+        "DEMOGRAPHIC": "highschool crowd"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [19.364490, -99.124350]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "PARK_ID": 9,
+        "FACILITYID": 28006,
+        "NAME": "木下グループ新型コロナＰＣＲセンター新宿店",
         "NAME_FR": "Lieu de planchodrome itinérant",
-        "ADDRESS": "〒135-0061 東京都江東区豊洲２丁目４−９ アーバンドック ららぽーと豊洲 1F フードコート内",
+        "ADDRESS": "新宿区新宿歌舞伎町１－２４－３",
         "DENSITY": "0.9",
         "POPULARITY": "normal",
         "DEMOGRAPHIC": "highschool crowd"
       },
       "geometry": {
         "type": "Point",
-        "coordinates": [35.683330, 139.816670]
+        "coordinates": [19.422649, -99.100723]
       }
     },
     {
       "type": "Feature",
       "properties": {
-        "PARK_ID": 657,
-        "FACILITYID": 28000,
-        "NAME": "Roving Skateboard Park Location",
+        "PARK_ID": 1160,
+        "FACILITYID": 28007,
+        "NAME": "木下グループ新型コロナＰＣＲセンター渋谷店",
         "NAME_FR": "Lieu de planchodrome itinérant",
-        "ADDRESS": "8720 Russell Road",
+        "ADDRESS": "渋谷区道玄坂２－８－９　市橋ビル",
         "DENSITY": "0.9",
         "POPULARITY": "normal",
         "DEMOGRAPHIC": "highschool crowd"
       },
       "geometry": {
         "type": "Point",
-        "coordinates": [35.988776, 139.648586]
+        "coordinates": [19.366310, -99.123650]
       }
     },
     {
       "type": "Feature",
       "properties": {
-        "PARK_ID": 653,
-        "FACILITYID": 28008,
-        "NAME": "ゴンチャ 上野松坂屋店",
-        "NAME_FR": "Lieu de planchodrome itinérant",
-        "ADDRESS": "〒110-8503 東京都台東区上野３丁目２９−５",
+        "PARK_ID": 1693,
+        "FACILITYID": 28016,
+        "NAME": "木下グループ新型コロナＰＣＲセンター池袋東口店",
+        "NAME_FR": "豊島区東池袋１－２２－７",
         "DENSITY": "0.9",
         "POPULARITY": "normal",
         "DEMOGRAPHIC": "highschool crowd"
       },
       "geometry": {
         "type": "Point",
-        "coordinates": [35.678953, 139.183013]
+        "coordinates": [35.695126, 139.753910]
       }
     }
+    
   ]
 }

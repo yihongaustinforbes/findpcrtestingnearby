@@ -10,9 +10,9 @@
       "properties": {
         "PARK_ID": 960,
         "FACILITYID": 28014,
-        "NAME": "PEARL LADY 茶BAR",
+        "NAME": "木下グループ新型コロナＰＣＲセンター秋葉原店",
         "NAME_FR": "Planchodrome Bearbrook",
-        "ADDRESS": "〒100-0005 東京都千代田区丸の内１−９ 東日本東京駅構内 グランスタ丸の内 改札外B1F 1JR",
+        "ADDRESS": "千代田区外神田１－１４－７秋葉原野村ビル",
         "DENSITY": "0.9",
         "POPULARITY": "normal",
         "DEMOGRAPHIC": "highschool crowd"
@@ -27,9 +27,9 @@
       "properties": {
         "PARK_ID": 1219,
         "FACILITYID": 28001,
-        "NAME": "Pearl Lady（パールレディ）新宿東宝ビル店",
+        "NAME": "木下グループ新型コロナＰＣＲセンター新橋店",
         "NAME_FR": "Planchodrome Bob-MacQuarrie (Parc SK8 Extreme)",
-        "ADDRESS": "〒160-0021 東京都新宿区歌舞伎町１丁目１９−１",
+        "ADDRESS": "港区新橋２－１６－１ニュー新橋ビル１階西側角",
         "DENSITY": "0.9",
         "POPULARITY": "normal",
         "DEMOGRAPHIC": "highschool crowd"
@@ -44,8 +44,8 @@
       "properties": {
         "PARK_ID": 1157,
         "FACILITYID": 28002,
-        "NAME": "Pearl Lady CHA BAR（茶バー）錦糸町マルイ店",
-        "ADDRESS": "〒130-0022 東京都墨田区江東橋３丁目９−１０ 錦糸町マルイ １階",
+        "NAME": "木下グループ新型コロナＰＣＲセンター浜松町店",
+        "ADDRESS": "港区芝大門１－１６－８",
         "DENSITY": "0.9",
         "POPULARITY": "normal",
         "DEMOGRAPHIC": "highschool crowd"
@@ -60,9 +60,9 @@
       "properties": {
         "PARK_ID": 9,
         "FACILITYID": 28006,
-        "NAME": "パールレディ 下北沢店",
+        "NAME": "木下グループ新型コロナＰＣＲセンター新宿店",
         "NAME_FR": "Lieu de planchodrome itinérant",
-        "ADDRESS": "〒155-0031 東京都世田谷区北沢２−２６−２４ オーブ井部",
+        "ADDRESS": "新宿区新宿歌舞伎町１－２４－３",
         "DENSITY": "0.9",
         "POPULARITY": "normal",
         "DEMOGRAPHIC": "highschool crowd"
@@ -77,9 +77,9 @@
       "properties": {
         "PARK_ID": 1160,
         "FACILITYID": 28007,
-        "NAME": "pearllady",
+        "NAME": "木下グループ新型コロナＰＣＲセンター渋谷店",
         "NAME_FR": "Lieu de planchodrome itinérant",
-        "ADDRESS": "10 Warner Colpitts Lane",
+        "ADDRESS": "渋谷区道玄坂２－８－９　市橋ビル",
         "DENSITY": "0.9",
         "POPULARITY": "normal",
         "DEMOGRAPHIC": "highschool crowd"
@@ -94,9 +94,8 @@
       "properties": {
         "PARK_ID": 1693,
         "FACILITYID": 28016,
-        "NAME": "pearllady",
-        "NAME_FR": "Planchodrome Legacy",
-        "ADDRESS": "101 Centrepointe Drive",
+        "NAME": "木下グループ新型コロナＰＣＲセンター池袋東口店",
+        "NAME_FR": "豊島区東池袋１－２２－７",
         "DENSITY": "0.9",
         "POPULARITY": "normal",
         "DEMOGRAPHIC": "highschool crowd"
