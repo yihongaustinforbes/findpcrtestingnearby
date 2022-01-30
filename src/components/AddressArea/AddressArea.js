@@ -476,7 +476,7 @@ export default class AddressArea extends React.Component{
         </div>
      
         <div className='heroBg'>
-                <video className='videoBg' autoPlay loop muted type='video/mp4' src={Video}/>
+                <video className='videoBg' playsinline autoPlay loop muted type='video/mp4' src={Video}/>
         
             </div>
             </div>
