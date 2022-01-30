@@ -1,7 +1,8 @@
 import React from 'react';
 import './addressarea.css';
-import * as clinicData from "../../data/gongcha-location.json";
-import $ from 'jquery'; 
+import Video from '../videos/video.mp4';
+import { Link as LinkS } from 'react-scroll';
+
 
 
 export default class AddressArea extends React.Component{
@@ -17,31 +18,62 @@ export default class AddressArea extends React.Component{
           latitude: '',
           longtitude: '',
           setMarker: props.setMarker,
-          setMarkerInfo: props.setMarkerInfo
+          setMarkerInfo: props.setMarkerInfo,
+          setClinicData: props.setClinicData,
+          districId: '',
+          clinicData: ''
         }
         this.setPostcode = this.setPostcode.bind(this);
         this.searchByPostcode = this.searchByPostcode.bind(this);
+        this.getData = this.getData.bind(this);
+        
       }
       componentDidMount() {
     
       }
+        getData=(districId)=>{
+         const jsonFile= districId+'-location.json';
+         fetch(jsonFile
+        ,{
+          headers : { 
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+           }
+        }
+        )
+        .then(response=>{
+          console.log(response)
+          return response.json();
+        })
+        .then(myJson=> {
+          console.log("myjson is"+ myJson);
+          this.state.setClinicData(myJson);
+          this.setState({clinicData: myJson});
+          return myJson;
+        });
+      }
       setPostcode(event){
           this.setState({postcode: event.target.value})
       }
-      searchByPostcode(postcode){
+      
+       async searchByPostcode(postcode){
         //clear the previous value
+        this.setState({
+          prefecture:'',
+          city: '',
+          area: '',
+          districId: '',
+          street: '',
+          lineTwo: ''
+    });
+    //clear current marker
+    this.state.setMarker(null);
         let a= '';
         let b='';
         let c='';
-        this.setState({
-            prefecture:a,
-            city: b,
-            area: c,
-            street: '',
-            lineTwo: ''
-      })
+        let  districtId='';
         var postal_code = require('japan-postal-code');
-         postal_code.get(postcode, function(address) {
+        postal_code.get(postcode, function(address) {
             console.log(address.prefecture); // => "東京都"
             a=address.prefecture;
             console.log(address.city); // => "千代田区"
@@ -49,14 +81,97 @@ export default class AddressArea extends React.Component{
             console.log(address.area); // => "千代田"
             c=address.area;
             console.log(address.street); // => ""
+            switch(address.city){
+              case '千代田区':
+                districtId = "chiyota";
+                break;
+              case '中央区':
+                districtId = "chuo";
+                break;
+              case '港区':
+                districtId = "minato";
+                break;
+              case '世田谷区':
+                districtId = "setagaya";
+                break; 
+              case '中野区':
+                districtId = "nakano";
+                break;     
+              case '北区':
+                districtId = "kita";
+                break;   
+              case '台東区':
+                districtId = "taitou";
+                break;         
+              case '品川区':
+                districtId = "shinagawa";
+                break;
+              case '大田区':
+                districtId = "ota";
+                break;
+              case '文京区':
+                districtId = "bunkyo";
+                break; 
+              case '新宿区':
+                districtId = "shinjuku";
+                break;
+              case '杉並区':
+                districtId = "siginami";
+                break;  
+              case '板橋区':
+                districtId = "itabashi";
+                break;   
+              case '江戸川区':
+                districtId = "edogawa";
+                break;  
+              case '江東区':
+                districtId = "koto";
+                break;
+              case '渋谷区':
+                districtId = "shibuya";
+                break;
+              case '目黒区':
+                districtId = "meguro";
+                break;   
+              case '練馬区':
+                districtId = "nerima";
+                break;  
+              case '荒川区':
+                districtId = "arakawa";
+                break;  
+              case '葛飾区':
+                districtId = "katsushika";
+                break; 
+              case '豊島区':
+                districtId = "toyoshima";
+                break;
+              case '足立区':
+                districtId = "adachi";
+                break; 
+              case '墨田区':
+                districtId = "sumida";
+                break;                               
+            }
          
           });
-          setTimeout(()=>{this.setState({
-              prefecture:a,
-              city: b,
-              area: c
-        })}
+     
+            setTimeout(()=>{
+              this.setState({
+                prefecture:a,
+                city: b,
+                area: c,
+                districId: districtId
+          });
+         
+         }
           ,500);
+          setTimeout(() => {
+           this.getData(districtId);
+          
+          }, 1000);
+         
+          
+         
       }
       async handleSearch() {
           //validation
@@ -64,10 +179,10 @@ export default class AddressArea extends React.Component{
           var nearstClinic = await this.validation(address);
           var latlngArray = nearstClinic.coordinates.split(',');
           //setMarker here
-          this.state.setMarker({lat: Number(latlngArray[0]), lng: Number(latlngArray[1]) });
+          this.state.setMarker({lat: Number(latlngArray[0]), lng: Number(latlngArray[1])});
           console.log("name of the store is" +nearstClinic.stores.NAME)
           this.state.setMarkerInfo(nearstClinic.stores);
- 
+          
       }
       async validation(address) {
         
@@ -96,7 +211,7 @@ export default class AddressArea extends React.Component{
               location = results[0].geometry.location;
               
             } else {
-            //   alert('Geocode was not successful for the following reason: ' + address);
+          
             alert('the address entered is not avialuble.' + address);
               console.log("the address above is not avialuble.")
             }
@@ -116,7 +231,7 @@ export default class AddressArea extends React.Component{
            const destinations_p = [];
            const names = [];
            // Build parallel arrays for the store IDs and destinations
-           await Promise.all(clinicData.features.map(async (store) => {
+           this.state.clinicData && await Promise.all(this.state.clinicData.features.map(async (store) => {
                const storeLoc = store.LOCATION;
                // console.log('storeCor is'+ [storeCor.lat(),storeCor.lng()]);
                destinations_p.push(storeLoc);
@@ -144,9 +259,9 @@ export default class AddressArea extends React.Component{
                        //console.log(response);
                        for (let j = 0; j < results.length; j++) {
                            const element = results[j];
-                           //console.log(element);
-                           const distanceText = (element.status != 'ZERO_RESULTS') ? element.distance.text : '9999999999 km';
-                           const distanceVal = (element.status != 'ZERO_RESULTS') ? element.distance.value : '9999999999 km';
+                           console.log(element);
+                           const distanceText = (element.status == 'OK') ? element.distance.text : '9999999999 km';
+                           const distanceVal = (element.status == 'OK') ? element.distance.value : '9999999999 km';
                            const distanceObject = {
                                coordinates: destinations_p[j],
                                stores: stores[j],
@@ -160,8 +275,6 @@ export default class AddressArea extends React.Component{
                    }
                });
            });
-   
-   
        /***********************************************************************************
        This method was build to pass only 25 destinations in array to distance matrix 
        service , that's the max it was take at a time , if there is change to this 
@@ -227,7 +340,7 @@ export default class AddressArea extends React.Component{
         p_process.push(await getDistanceMatrix(service, {
             origins: [origin],
             destinations: newDes,
-            travelMode: 'WALKING',
+            travelMode: 'DRIVING',
             unitSystem: window.google.maps.UnitSystem.METRIC,
           }));
    
@@ -306,9 +419,12 @@ export default class AddressArea extends React.Component{
       render(){
         return (
             <>
-            <div style={{ fontSize: "20px", fontWeight: "700",  margin:"10px auto", width:"500px", textAlign:"center"}}>
+              <div className='heroContainer'>
+
+             <div className='heroContext'>
+            {/* <div style={{ fontSize: "20px", fontWeight: "700",  margin:"10px auto", width:"500px", textAlign:"center"}}> */}
               <h1>Find Your Nearest PCR Testing Center!!!</h1>
-            
+               <p style={{ marginLeft: "200px", color: "aquamarine"}}>By Sunny </p>
               <div id="lookup_field">
         <div id="context">
           
@@ -351,11 +467,19 @@ export default class AddressArea extends React.Component{
         <input id="postcode" type="text"　autocomplete="off" value={this.state.lineTwo} onChange={(event) => this.setState({lineTwo: event.target.value})} placeholder='e.g.ライオンマンション'/>
         </div>
         </div>
-        <div className='buttonWrapper'>
         
+        <div className='buttonWrapper'>
         <button className="search" value='' onClick={() => this.handleSearch()}>Find the nearest spot</button>
         </div>
+      
+        {/* </div> */}
         </div>
+     
+        <div className='heroBg'>
+                <video className='videoBg' autoPlay loop muted type='video/mp4' src={Video}/>
+        
+            </div>
+            </div>
   </>
         )
 

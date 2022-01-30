@@ -1,0 +1,36 @@
+{"type": "FeatureCollection",
+    "crs": {
+      "type": "name",
+      "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" }
+    },
+    "features": 
+[
+    {
+      "NAME": "ウエルシア台東入谷調剤薬局",
+      "DISTRICT": "台東区",
+      "ADDRESS": "東京都台東区北上野２－３０－７　ファイン北上野",
+      "HOURS": "月～金　9:00～19:00\n土　　　10:00～13：30、14：30～17:00",
+      "PCR": "○",
+      "ANTIBODY": "○",
+      "LOCATION": "35.71969858096113, 139.78421273815204"
+    },
+    {
+      "NAME": "MDT衛生検査所　浅草橋受付センター",
+      "DISTRICT": "台東区",
+      "ADDRESS": "東京都台東区浅草橋1-10-6　R.core　ASAKUSABASHI１F",
+      "HOURS": "月曜日～日曜日　9：00～20：00　無休",
+      "PCR": "○",
+      "ANTIBODY": "",
+      "LOCATION": "35.69729948841162, 139.78478803999798"
+    },
+    {
+      "NAME": "みどり薬局",
+      "DISTRICT": "台東区",
+      "ADDRESS": "東京都台東区蔵前4-21-9",
+      "HOURS": "月曜日～金曜日　9:00～17:00\n祝日休み",
+      "PCR": "",
+      "ANTIBODY": "○",
+      "LOCATION": "35.705008499291054, 139.79021631300932"
+    }
+  ]
+}

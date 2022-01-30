@@ -10,6 +10,7 @@
     "react-dom": "^16.8.6",
     "react-google-maps": "^9.4.5",
     "react-scripts": "2.1.8",
+    "react-scroll": "^1.8.4",
     "typescript": "^4.5.4"
   },
   "scripts": {
